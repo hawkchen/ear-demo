@@ -1,0 +1,23 @@
+<zk>
+	<div viewModel="@id('vm') @init('zk.support.TestViewModel')">
+		<button sclass="button" label="toggle edit" onClick="@command('edit')" />
+		<if test="@load(vm.editing)">
+			<div form="@id('fx') @load(vm.myPojo) @load(vm.myPojo, after='cancel') @save(vm.myPojo, before='save')">
+				<div>
+					origin -> <label value="@init(vm.myPojo)"/>
+				</div>
+				<div>
+					form proxy -> <label value="@init(fx)"/>
+				</div>
+				<div>
+					Name: <textbox value="@bind(fx.name)"/>
+				<div>
+				</div>
+					Age: <intbox value="@bind(fx.age)"/>
+				</div>
+				<button sclass="button" label="save" onClick="@command('save', test='testStr')" />
+				<button sclass="button" label="cancel" onClick="@command('cancel', test='testStr')" />
+			</div>
+		</if>
+	</div>
+</zk>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>zk.support</groupId>
+	<artifactId>good-ear-root</artifactId>
+	<version>0.0.1</version>
+	<packaging>pom</packaging>
+
+	<name>good-ear-root</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.target>8</maven.compiler.target>
+		<maven.compiler.source>8</maven.compiler.source>
+		<jakartaee.version>9.1.0</jakartaee.version>
+		<zk.version>9.6.3-jakarta.FL.20221014-Eval</zk.version>
+	</properties>
+	<modules>
+		<module>good-ejb</module>
+		<module>good-war1</module>
+		<module>good-war2</module>
+		<module>good-ear</module>
+	</modules>
+
+	<repositories>
+ 		<repository>
+			<id>ZK CE</id>
+			<url>https://mavensync.zkoss.org/maven2</url>
+		</repository>
+		<repository>
+			<id>ZK EE</id>
+			<url>https://maven.zkoss.org/repo/zk/ee</url>
+		</repository>
+		<repository>
+			<id>ZK EE Evaluation</id>
+			<url>https://mavensync.zkoss.org/zk/ee-eval</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>jakarta.platform</groupId>
+			<artifactId>jakarta.jakartaee-api</artifactId>
+			<version>${jakartaee.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>

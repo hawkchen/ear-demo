@@ -1,0 +1,5 @@
+<zk>
+	<div apply="zk.support.MyComposer">
+		<listbox id="box"/>
+	</div>
+</zk>

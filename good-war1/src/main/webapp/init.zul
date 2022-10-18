@@ -1,0 +1,7 @@
+<zk>
+	<div viewModel="@id('vm') @init('zk.support.TestViewModel')">
+		<forEach items="@init(vm.size)">
+			<label value="@init(each)"/>
+		</forEach>
+	</div>
+</zk>
