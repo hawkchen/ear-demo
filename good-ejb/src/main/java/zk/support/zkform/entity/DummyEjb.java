@@ -1,6 +1,5 @@
 package zk.support.zkform.entity;
 
-//import javax.ejb.Singleton;
 import jakarta.ejb.Singleton;
 
 /**
