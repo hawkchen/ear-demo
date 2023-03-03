@@ -5,12 +5,8 @@
 	<parent>
 		<groupId>zk.support</groupId>
 		<artifactId>good-ear-root</artifactId>
-		<version>0.0.1</version>
+		<version>1.0.0</version>
 	</parent>
-	
-	<properties>
-<!-- <zk.version>9.0.0</zk.version> -->
-	</properties>
 	<artifactId>good-ear</artifactId>
 	<packaging>ear</packaging>
 	<name>good-ear</name>
@@ -38,38 +34,36 @@
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkbind-api</artifactId>
 			<version>${zk.version}</version>
-			<!-- no longer necessary to exclude since 9.6.0(-jakarta) -->
-<!--			<exclusions>-->
-<!--				<exclusion>-->
-<!--					<groupId>org.zkoss.zk</groupId>-->
-<!--					<artifactId>zul</artifactId>-->
-<!--				</exclusion>-->
-<!--			</exclusions>-->
 		</dependency>
-		<!-- instead glassfish 5.1.0/6.2.0 needs to include this dependency ... -->
+		<!-- glassfish 5.1.0/6.2.0 needs to include this ZK dependency -->
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
-			<artifactId>zul</artifactId>
+			<artifactId>zk</artifactId>
 			<version>${zk.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-fileupload</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>commons-io</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.javassist</groupId>
 			<artifactId>javassist</artifactId>
 			<version>3.18.0-GA</version>
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.30</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
-            <!--
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<configuration>
-					<skip>true</skip>
-				</configuration>
-			</plugin>
-            -->
-
 			<plugin>
 				<artifactId>maven-ear-plugin</artifactId>
 				<version>3.0.1</version>

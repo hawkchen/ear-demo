@@ -6,7 +6,7 @@
 
 	<groupId>zk.support</groupId>
 	<artifactId>good-ear-root</artifactId>
-	<version>0.0.1</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
 	<name>good-ear-root</name>
@@ -16,7 +16,7 @@
 		<maven.compiler.target>8</maven.compiler.target>
 		<maven.compiler.source>8</maven.compiler.source>
 		<jakartaee.version>9.1.0</jakartaee.version>
-		<zk.version>9.6.3-jakarta.FL.20221014-Eval</zk.version>
+		<zk.version>9.6.3-jakarta-Eval</zk.version>
 	</properties>
 	<modules>
 		<module>good-ejb</module>
